@@ -1,0 +1,11 @@
+:root {
+  --xr: 1rem;
+  --yr: 0.25rem;
+
+  --c: #9A554B;
+  --w_c: #f0f0f0;
+}
+
+@custom-media --s (min-width: 760px);
+@custom-media --m (min-width: 980px);
+@custom-media --l (min-width: 1260px);

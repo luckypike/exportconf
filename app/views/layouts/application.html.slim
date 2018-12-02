@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Export Conf
+
+    = tag('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' })
+    / = favicon_link_tag '/favicon.ico'
+
+  body
+    = yield
+
+    = stylesheet_pack_tag 'app'
+    = javascript_pack_tag 'app'
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=cyrillic'
