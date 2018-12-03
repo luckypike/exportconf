@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import update from 'immutability-helper';
 
+import Program from './Program';
+
 import logo from '../images/logo.svg';
 import styles from './Index.module.css';
 
@@ -80,7 +82,7 @@ class Index extends Component {
           </div>
 
           <div className={styles.title}>
-            Развитие промышленного экспорта и экспортные программы
+            Развитие промышленного экспорта, экспортные программы
           </div>
 
           <div className={styles.desc}>
@@ -200,6 +202,12 @@ class Index extends Component {
                   <input type="submit" value="Зарегистрироваться" className={styles.button} disabled={!this._canSubmit()} />
                 </div>
               </form>
+            </div>
+          }
+
+          {!start &&
+            <div className={styles.program}>
+              <Program />
             </div>
           }
         </div>

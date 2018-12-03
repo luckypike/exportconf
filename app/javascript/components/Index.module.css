@@ -146,6 +146,14 @@
   }
 }
 
+.program {
+  margin-top: calc(var(--yr) * 7);
+
+  @media (--s) {
+    margin-top: calc(var(--yr) * 14);
+  }
+}
+
 .form {
   /* margin-top: calc(var(--yr) * 10); */
   font-size: calc(var(--yr) * 4.5);
