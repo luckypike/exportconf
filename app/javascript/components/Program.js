@@ -253,7 +253,7 @@ class Program extends Component {
             </div>
 
             <div className={styles.action}>
-              Переезд к гостиницам
+              Переезд к гостиницам, отъезд
             </div>
           </div>
 
