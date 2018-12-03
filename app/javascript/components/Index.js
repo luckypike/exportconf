@@ -87,7 +87,7 @@ class Index extends Component {
             Под председательством Министра промышленности и торговли РФ Д.В. Мантурова
           </div>
 
-          <div className={styles.date}>
+          <div className={styles.when}>
             10-11 декабря 2018 г.
           </div>
 
@@ -155,6 +155,10 @@ class Index extends Component {
                   <div className={styles.formLabel}>
                     Отель
                   </div>
+
+                  <div className={styles.formHint}>
+                    Доставка осуществляется только от указанных отелей!
+                  </div>
                   <div className={styles.formInput}>
                     <div className={styles.radio}>
                       <label>
@@ -173,7 +177,7 @@ class Index extends Component {
                     <div className={styles.radio}>
                       <label>
                         <input name="hotel" type="radio" checked={'none' == values.hotel} value="none" onChange={this.handleInputChange} />
-                        Не требуется
+                        Другой
                       </label>
                     </div>
                   </div>
