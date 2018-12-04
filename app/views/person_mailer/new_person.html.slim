@@ -1,0 +1,29 @@
+p
+  ' Имя:
+  = @person.name
+
+p
+  ' Фамилия:
+  = @person.surname
+
+p
+  ' Отчество:
+  = @person.middlename
+
+p
+  ' Почта:
+  = @person.email
+
+p
+  ' Телефон:
+  = @person.phone
+
+p
+  ' Отель:
+  = @person.hotel_last
+
+p Торговые представители:
+ul
+  - @person.sales.each do |k, sale|
+    li
+      = pp sale['name']

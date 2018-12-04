@@ -56,7 +56,10 @@ class Index extends Component {
       this.setState({ send: true });
 
       axios.post('/persons.json', {
-        person: this.state.values,
+        person: {
+          ...this.state.values,
+          sales: Object.entries(this.state.values.sales).filter(ob => ob[1]).reduce((acc, ob) => ({...acc, [ob[0]]: Sales.find(s => s.id == ob[0])}), {})
+        },
       }).then(res => {
         this.setState({
           done: true
