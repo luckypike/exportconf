@@ -5,6 +5,7 @@
     "@babel/core": "^7.0.0-0",
     "@babel/preset-react": "^7.0.0",
     "@rails/webpacker": "https://github.com/rails/webpacker",
+    "axios": "^0.18.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
     "classnames": "^2.2.6",
     "immutability-helper": "^2.8.1",

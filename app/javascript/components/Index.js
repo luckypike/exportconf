@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import update from 'immutability-helper';
+import axios from 'axios';
 
 import Program from './Program';
 import Logistics from './Logistics';
@@ -8,21 +9,13 @@ import Logistics from './Logistics';
 import logo from '../images/logo.svg';
 import styles from './Index.module.css';
 
-const sales = [
-  {
-    id: 1,
-    name: 'QQQQ',
-  },
-  {
-    id: 2,
-    name: 'RRR',
-  },
-];
-
+import { Sales } from '../Sales';
 
 class Index extends Component {
   state = {
     start: false,
+    send: false,
+    done: false,
     values: {
       name: '',
       surname: '',
@@ -30,7 +23,7 @@ class Index extends Component {
       phone: '',
       email: '',
       hotel: '',
-      sales: sales.reduce((o, v) => ({...o, [v.id]: false}), {}),
+      sales: Sales.reduce((o, v) => ({...o, [v.id]: false}), {}),
     }
   }
 
@@ -58,6 +51,21 @@ class Index extends Component {
     }));
   }
 
+  handleSubmit = e => {
+    if(this._canSubmit()) {
+      this.setState({ send: true });
+
+      axios.post('/persons.json', {
+        person: this.state.values,
+      }).then(res => {
+        this.setState({
+          done: true
+        });
+      });
+    }
+    e.preventDefault();
+  }
+
   _canSubmit() {
     return (
       this.state.values.email &&
@@ -65,11 +73,13 @@ class Index extends Component {
       this.state.values.phone &&
       this.state.values.name &&
       this.state.values.surname &&
-      this.state.values.middlename);
+      this.state.values.middlename &&
+      !this.state.send
+    );
   }
 
   render() {
-    const { start, values } = this.state;
+    const { start, values, done } = this.state;
 
     return (
       <div className={styles.root}>
@@ -106,9 +116,9 @@ class Index extends Component {
             </div>
           }
 
-          {start &&
+          {start && !done &&
             <div className={classNames(styles.form, { [styles.start]: start })}>
-              <form className={styles.form}>
+              <form className={styles.form} onSubmit={this.handleSubmit}>
                 <div className={styles.formRow}>
                   <div className={styles.formLabel}>
                     Имя
@@ -187,13 +197,19 @@ class Index extends Component {
                 </div>
 
                 <div className={styles.formRow}>
-                  Список торговых представителей
+                  <div className={styles.formLabel}>
+                    Список торговых представителей
+                  </div>
 
                   <div className={styles.checkbox}>
-                    {sales.map(sale =>
+                    {Sales.map(sale =>
                       <label key={sale.id}>
                         <input type="checkbox" name="sales" onChange={this.handleCheckboxChange} checked={values.sales[sale.id]} value={sale.id} />
                         {sale.name}
+                        <br />
+                        <span className={styles.dd}>
+                          {sale.desc}
+                        </span>
                       </label>
                     )}
                   </div>
@@ -203,6 +219,12 @@ class Index extends Component {
                   <input type="submit" value="Зарегистрироваться" className={styles.button} disabled={!this._canSubmit()} />
                 </div>
               </form>
+            </div>
+          }
+
+          {start && done &&
+            <div className={styles.done}>
+              Вы успешно подали заявку на участие в координационном совете. В ближайшее время с вами свяжутся наши координаторы чтобы подтвердить участие.
             </div>
           }
 

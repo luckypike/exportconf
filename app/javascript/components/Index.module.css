@@ -99,6 +99,18 @@
   }
 }
 
+.done {
+  font-size: calc(var(--yr) * 5.5);
+  line-height: calc(var(--yr) * 7.5);
+  margin-bottom: calc(var(--yr) * 10);
+
+  @media (--s) {
+    font-size: calc(var(--yr) * 7.5);
+    line-height: calc(var(--yr) * 10.5);
+    margin-bottom: calc(var(--yr) * 14);
+  }
+}
+
 .where {
   margin-bottom: calc(var(--yr) * 10);
 }
@@ -214,10 +226,21 @@
 
 }
 
+.dd {
+  display: inline-block;
+  font-size: calc(var(--yr) * 3.5);
+  margin-left: 1.75em;
+  /* line-height: calc(var(--yr) * 5); */
+
+}
+
 .checkbox {
+
+
   & label {
+    margin-bottom: calc(var(--yr) * 3);
     display: block;
-    margin-bottom: calc(var(--yr) * 1);
+    /* margin-bottom: calc(var(--yr) * 1); */
 
     & input {
       margin-right: 0.5em;
