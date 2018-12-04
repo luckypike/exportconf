@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import update from 'immutability-helper';
 
 import Program from './Program';
+import Logistics from './Logistics';
 
 import logo from '../images/logo.svg';
 import styles from './Index.module.css';
@@ -206,9 +207,15 @@ class Index extends Component {
           }
 
           {!start &&
-            <div className={styles.program}>
-              <Program />
-            </div>
+            <>
+              <div className={styles.program}>
+                <Program />
+              </div>
+
+              <div className={styles.logistics}>
+                <Logistics />
+              </div>
+            </>
           }
         </div>
       </div>

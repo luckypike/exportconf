@@ -1,0 +1,58 @@
+.root {
+
+}
+
+.title {
+  font-size: calc(var(--yr) * 4.5);
+  line-height: calc(var(--yr) * 5);
+  margin-bottom: calc(var(--yr) * 2.5);
+
+  @media (--s) {
+    font-size: calc(var(--yr) * 5.5);
+    line-height: calc(var(--yr) * 7);
+    margin-bottom: calc(var(--yr) * 5);
+  }
+}
+
+
+.list {
+  @media (--s) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: calc(var(--xr) * 2);
+  }
+}
+
+.item {
+  margin-bottom: calc(var(--yr) * 8);
+}
+
+.icon {
+  margin-bottom: calc(var(--yr) * 4);
+  color: #1f4998;
+  font-weight: bold;
+  font-size: calc(var(--yr) * 3.5);
+  line-height: calc(var(--yr) * 6);
+  padding-top: calc(var(--yr) * 2);
+  padding-left: 150px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  &.air {
+    background-image: url('../images/air.png');
+  }
+
+  &.rr {
+    background-image: url('../images/rr.png');
+  }
+
+  &.hotel {
+    color: var(--c);
+    line-height: calc(var(--yr) * 8);
+    padding-left: calc(var(--yr) * 8 + var(--xr));
+    background: url('../images/hotel.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
