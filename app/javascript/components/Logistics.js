@@ -52,7 +52,7 @@ class Logistics extends Component {
           <div className={styles.list}>
             <div className={styles.item}>
               <div className={classNames(styles.icon, styles.hotel)}>
-                от 6900 руб.
+                от 5500 руб.
               </div>
               <div className={styles.desc}>
                 <p>
@@ -66,7 +66,7 @@ class Logistics extends Component {
 
             <div className={styles.item}>
               <div className={classNames(styles.icon, styles.hotel)}>
-                от 6000 руб.
+                от 4200 руб.
               </div>
               <div className={styles.desc}>
                 <p>

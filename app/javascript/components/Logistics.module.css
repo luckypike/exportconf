@@ -29,7 +29,7 @@
 
 .icon {
   margin-bottom: calc(var(--yr) * 4);
-  color: #1f4998;
+  color: var(--c);
   font-weight: bold;
   font-size: calc(var(--yr) * 3.5);
   line-height: calc(var(--yr) * 6);
@@ -40,11 +40,11 @@
   background-size: auto 100%;
 
   &.air {
-    background-image: url('../images/air.png');
+    background-image: url('../images/air.svg');
   }
 
   &.rr {
-    background-image: url('../images/rr.png');
+    background-image: url('../images/rr.svg');
   }
 
   &.hotel {
