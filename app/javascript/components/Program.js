@@ -31,32 +31,6 @@ class Program extends Component {
             </div>
           </div>
 
-          <div className={styles.row}>
-            <div className={styles.time}>
-              19:30 — 20:00
-            </div>
-
-            <div className={styles.action}>
-              Регистрация участников в холле конференц-зоны отеля Sheraton N.Novgorod Kremlin
-
-            </div>
-          </div>
-
-          <div className={styles.row}>
-            <div className={styles.time}>
-              20:00
-            </div>
-
-            <div className={styles.action}>
-              <p>
-                <strong>Рабочая встреча Торговых представителей с заместителем Министра промышленности и торговли Российской Федерации А.В. Груздевым</strong>
-              </p>
-              <p>
-                Зал «Пожарский», отель Sheraton N.Novgorod Kremlin
-              </p>
-            </div>
-          </div>
-
           <div className={styles.date}>
             10 декабря, понедельник
           </div>
@@ -68,10 +42,10 @@ class Program extends Component {
 
             <div className={styles.action}>
               <p>
-                <strong>Регистрация участников</strong>
+                <strong>Деловой завтрак</strong>
               </p>
               <p>
-                Отель Sheraton N.Novgorod Kremlin
+                Ресторан отеля Sheraton N.Novgorod Kremlin
               </p>
             </div>
           </div>
@@ -83,10 +57,10 @@ class Program extends Component {
 
             <div className={styles.action}>
               <p>
-                <strong>Деловой завтрак, биржа контактов</strong>
+                <strong>Биржа контактов</strong>
               </p>
               <p>
-                Ресторан отеля Sheraton N.Novgorod Kremlin
+                Конференц-зал отеля Sheraton N.Novgorod Kremlin
               </p>
             </div>
           </div>
@@ -180,7 +154,7 @@ class Program extends Component {
 
           <div className={styles.row}>
             <div className={styles.time}>
-              18:00
+              18:00 — 21:00
             </div>
 
             <div className={styles.action}>
