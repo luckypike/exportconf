@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:luckypike/exportconf.git"
 
 set :deploy_to, "/home/deploy/apps/krdsovet.ru"
 
-append :linked_files, "config/master.key"
+append :linked_files, "config/master.key", "db/production.sqlite3"
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "public/uploads"
 
