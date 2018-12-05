@@ -1,0 +1,18 @@
+.title {
+  font-size: calc(var(--yr) * 4.5);
+  line-height: calc(var(--yr) * 5);
+  /* margin-bottom: calc(var(--yr) * 2.5); */
+
+  @media (--s) {
+    font-size: calc(var(--yr) * 5.5);
+    line-height: calc(var(--yr) * 7);
+    /* margin-bottom: calc(var(--yr) * 5); */
+  }
+}
+
+.root {
+  & img {
+    display: block;
+    width: 100%;
+  }
+}

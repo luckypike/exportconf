@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Program from './Program';
 import Logistics from './Logistics';
+import Organizers from './Organizers';
 
 import logo from '../images/logo.svg';
 import styles from './Index.module.css';
@@ -239,6 +240,10 @@ class Index extends Component {
 
               <div className={styles.logistics}>
                 <Logistics />
+              </div>
+
+              <div className={styles.organizers}>
+                <Organizers />
               </div>
             </>
           }
