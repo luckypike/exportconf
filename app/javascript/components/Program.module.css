@@ -14,7 +14,11 @@
 .date {
   font-weight: bold;
   text-align: center;
-  padding-top: calc(var(--yr) * 8);
+  padding-top: calc(var(--yr) * 10);
+  padding-bottom: calc(var(--yr) * 4);
+  border-bottom: 2px solid var(--c);
+  font-size: calc(var(--yr) * 4.5);
+  line-height: calc(var(--yr) * 5);
 
   &:first-child {
     padding-top: 0;
@@ -23,6 +27,9 @@
   @media (--s) {
     text-align: left;
     padding-left: 30%;
+    padding-top: calc(var(--yr) * 14);
+    font-size: calc(var(--yr) * 5.5);
+    line-height: calc(var(--yr) * 7);    
   }
 }
 
