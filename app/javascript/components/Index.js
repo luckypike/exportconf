@@ -176,6 +176,7 @@ class Index extends Component {
                   <div className={styles.formHint}>
                     Доставка осуществляется только от указанных отелей!
                   </div>
+
                   <div className={styles.formInput}>
                     <div className={styles.radio}>
                       <label>
@@ -203,6 +204,10 @@ class Index extends Component {
                 <div className={styles.formRow}>
                   <div className={styles.formLabel}>
                     Список торговых представителей
+                  </div>
+
+                  <div className={styles.formHint}>
+                    Необязательно для заполнения. Только для представителей органов исполнительной власти субъектов РФ и предприятий по приглашениям (или приглашенным предприятиям).
                   </div>
 
                   <div className={styles.checkbox}>
