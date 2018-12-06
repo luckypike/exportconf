@@ -206,11 +206,7 @@ class Index extends Component {
 
                 <div className={styles.formRow}>
                   <div className={styles.formLabel}>
-                    Посещение нижегородских музеев
-                  </div>
-
-                  <div className={styles.formHint}>
-                    Необязательно для заполнения.
+                   «Культурная программа (по желанию)»
                   </div>
 
                   <div className={styles.checkbox}>

@@ -31,6 +31,28 @@ class Program extends Component {
             </div>
           </div>
 
+          <div className={styles.row}>
+            <div className={styles.time}>
+              19:00 — 20:00
+            </div>
+             <div className={styles.action}>
+              Регистрация участников в холле конференц-зоны отеля Sheraton N.Novgorod Kremlin
+             </div>
+          </div>
+           <div className={styles.row}>
+            <div className={styles.time}>
+              20:00
+            </div>
+             <div className={styles.action}>
+              <p>
+                <strong>Рабочая встреча Торговых представителей с заместителем Министра промышленности и торговли Российской Федерации А.В. Груздевым</strong>
+              </p>
+              <p>
+                Зал «Пожарский», отель Sheraton N.Novgorod Kremlin
+              </p>
+            </div>
+          </div>
+
           <div className={styles.date}>
             10 декабря, понедельник
           </div>
