@@ -11,6 +11,7 @@ import logo from '../images/logo.svg';
 import styles from './Index.module.css';
 
 import { Sales } from '../Sales';
+import { Museums } from '../Museums';
 
 class Index extends Component {
   state = {
@@ -24,6 +25,7 @@ class Index extends Component {
       phone: '',
       email: '',
       hotel: '',
+      museums: Museums.reduce((o, v) => ({...o, [v.id]: false}), {}),
       sales: Sales.reduce((o, v) => ({...o, [v.id]: false}), {}),
     }
   }
@@ -43,12 +45,12 @@ class Index extends Component {
     const value = target.checked;
     const name = parseInt(target.value);
 
-    const sales = update(this.state.values.sales, {
+    const vs = update(this.state.values[target.name], {
       [name]: { $set: value }
     });
 
     this.setState(state => ({
-      values: { ...state.values, sales }
+      values: { ...state.values, [target.name]: vs }
     }));
   }
 
@@ -59,7 +61,8 @@ class Index extends Component {
       axios.post('/persons.json', {
         person: {
           ...this.state.values,
-          sales: Object.entries(this.state.values.sales).filter(ob => ob[1]).reduce((acc, ob) => ({...acc, [ob[0]]: Sales.find(s => s.id == ob[0])}), {})
+          sales: Object.entries(this.state.values.sales).filter(ob => ob[1]).reduce((acc, ob) => ({...acc, [ob[0]]: Sales.find(s => s.id == ob[0])}), {}),
+          museums: Object.entries(this.state.values.museums).filter(ob => ob[1]).reduce((acc, ob) => ({...acc, [ob[0]]: Museums.find(s => s.id == ob[0])}), {})
         },
       }).then(res => {
         this.setState({
@@ -198,6 +201,29 @@ class Index extends Component {
                         Другой
                       </label>
                     </div>
+                  </div>
+                </div>
+
+                <div className={styles.formRow}>
+                  <div className={styles.formLabel}>
+                    Посещение нижегородских музеев
+                  </div>
+
+                  <div className={styles.formHint}>
+                    Необязательно для заполнения.
+                  </div>
+
+                  <div className={styles.checkbox}>
+                    {Museums.map(museum =>
+                      <label key={museum.id}>
+                        <input type="checkbox" name="museums" onChange={this.handleCheckboxChange} checked={values.museums[museum.id]} value={museum.id} />
+                        {museum.name}
+                        <br />
+                        <span className={styles.dd}>
+                          {museum.desc}
+                        </span>
+                      </label>
+                    )}
                   </div>
                 </div>
 
