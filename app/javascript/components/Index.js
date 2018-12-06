@@ -206,7 +206,7 @@ class Index extends Component {
 
                 <div className={styles.formRow}>
                   <div className={styles.formLabel}>
-                   Культурная программа (по желанию>)
+                   Культурная программа (по желанию)
                   </div>
 
                   <div className={styles.checkbox}>
