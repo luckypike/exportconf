@@ -33,14 +33,6 @@ class Program extends Component {
 
           <div className={styles.row}>
             <div className={styles.time}>
-              19:00 — 20:00
-            </div>
-             <div className={styles.action}>
-              Регистрация участников в холле конференц-зоны отеля Sheraton N.Novgorod Kremlin
-             </div>
-          </div>
-           <div className={styles.row}>
-            <div className={styles.time}>
               20:00
             </div>
              <div className={styles.action}>
