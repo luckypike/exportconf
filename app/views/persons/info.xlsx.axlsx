@@ -1,0 +1,16 @@
+wb = xlsx_package.workbook
+
+wb.styles do |s|
+  bold =  s.add_style  :b => true
+  labels = []
+  wb.add_worksheet(name: "Info") do |sheet|
+
+    options = []
+
+    @persons.each do |person|
+      values = [person.surname, person.name, person.middlename, person.phone, person.email, person.hotel_last, person.sales.map{|id, s| s['name']}.join(', ')]
+      values.push(person.museums.map{|id, m| m['name']}.join(', ')) if person.museums.present?
+      sheet.add_row values
+    end
+  end
+end

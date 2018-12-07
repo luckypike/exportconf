@@ -54,6 +54,14 @@ GEM
     airbrussh (1.3.1)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
+    axlsx (3.0.0.pre)
+      htmlentities (~> 4.3, >= 4.3.4)
+      mimemagic (~> 0.3)
+      nokogiri (~> 1.8, >= 1.8.2)
+      rubyzip (~> 1.2, >= 1.2.1)
+    axlsx_rails (0.5.2)
+      actionpack (>= 3.1)
+      axlsx (>= 2.0.1)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -87,6 +95,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    htmlentities (4.3.4)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.8.0)
@@ -157,6 +166,7 @@ GEM
       railties (>= 3.2)
       tilt
     ruby_dep (1.5.0)
+    rubyzip (1.2.2)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -199,6 +209,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  axlsx (= 3.0.0.pre)
+  axlsx_rails
   bootsnap (>= 1.1.0)
   byebug
   capistrano (~> 3.7, >= 3.7.1)

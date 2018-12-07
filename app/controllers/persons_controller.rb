@@ -10,6 +10,14 @@ class PersonsController < ApplicationController
     end
   end
 
+  def info
+    @persons = Person.all.order(surname: :asc)
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
   private
   def person_params
     params.require(:person).permit(:name, :surname, :middlename, :phone, :email, :hotel, sales: {}, museums: {})
